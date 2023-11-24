@@ -9,6 +9,12 @@ def about(request):
 def contact(request):
     return HttpResponse("<h3>Contact</h3>")
 
+def introduce(request, name, age):
+    return HttpResponse(f"""
+                        <h3>I'm {name}</h3>
+                        <h4>age is {age}</h4>
+                        """)
+
 def text(request):
     return HttpResponse("""
                         <h1>Hello world</h1>
